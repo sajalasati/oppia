@@ -49,6 +49,8 @@ class UserSettingsModel(base_models.BaseModel):
     gae_id = ndb.StringProperty(required=True, indexed=True)
     # Email address of the user.
     email = ndb.StringProperty(required=True, indexed=True)
+    # random shit
+    email_id = ndb.StringProperty(required=True, indexed=True)
     # User role. Required for authorization. User gets a default role of
     # exploration editor.
     # TODO(1995YogeshSharma): Remove the default value once the one-off
