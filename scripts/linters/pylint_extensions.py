@@ -44,6 +44,8 @@ ALLOWED_TERMINATING_PUNCTUATIONS = ['.', '?', '}', ']', ')']
 EXCLUDED_PHRASES = [
     'coding:', 'pylint:', 'http://', 'https://', 'scripts/', 'extract_node']
 
+NO_REQUIRED_DOC_RGX = re.compile("^_")
+
 import astroid  # isort:skip  pylint: disable=wrong-import-order, wrong-import-position
 from pylint import checkers  # isort:skip  pylint: disable=wrong-import-order, wrong-import-position
 from pylint import interfaces  # isort:skip  pylint: disable=wrong-import-order, wrong-import-position
@@ -549,21 +551,21 @@ class DocstringParameterChecker(checkers.BaseChecker):
     options = (
         (
             'accept-no-param-doc',
-            {'default': True, 'type': 'yn', 'metavar': '<y or n>',
+            {'default': False, 'type': 'yn', 'metavar': '<y or n>',
              'help': 'Whether to accept totally missing parameter '
                      'documentation in the docstring of a '
                      'function that has parameters.'
             }),
         (
             'accept-no-raise-doc',
-            {'default': True, 'type': 'yn', 'metavar': '<y or n>',
+            {'default': False, 'type': 'yn', 'metavar': '<y or n>',
              'help': 'Whether to accept totally missing raises '
                      'documentation in the docstring of a function that '
                      'raises an exception.'
             }),
         (
             'accept-no-return-doc',
-            {'default': True, 'type': 'yn', 'metavar': '<y or n>',
+            {'default': False, 'type': 'yn', 'metavar': '<y or n>',
              'help': 'Whether to accept totally missing return '
                      'documentation in the docstring of a function that '
                      'returns a statement.'
@@ -573,6 +575,16 @@ class DocstringParameterChecker(checkers.BaseChecker):
             {'default': True, 'type': 'yn', 'metavar': '<y or n>',
              'help': 'Whether to accept totally missing yields '
                      'documentation in the docstring of a generator.'
+            }),
+        (
+            "no-docstring-rgx",
+            {
+                "default": NO_REQUIRED_DOC_RGX,
+                "type": "regexp",
+                "metavar": "<regexp>",
+                "help": "Regular expression which should only match "
+                "function or class names that do not require a "
+                "docstring.",
             }),
         )
 
@@ -627,6 +639,8 @@ class DocstringParameterChecker(checkers.BaseChecker):
             node: astroid.scoped_nodes.Function. Node for a function or
                 method definition in the AST.
         """
+        if self.config.no_docstring_rgx.match(node.name) is not None:
+            return
         node_doc = docstrings_checker.docstringify(node.doc)
         self.check_functiondef_params(node, node_doc)
         self.check_functiondef_returns(node, node_doc)
