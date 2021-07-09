@@ -597,6 +597,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
                 'id': 'node_1',
                 'thumbnail_filename': None,
                 'thumbnail_bg_color': None,
+                'thumbnail_size_in_bytes': None,
                 'title': 'Title 1',
                 'description': 'Description 1',
                 'destination_node_ids': [self.NODE_ID_2],
@@ -657,6 +658,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image1.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_3'],
@@ -671,6 +673,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image2.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': ['node_1'],
@@ -685,6 +688,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image3.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 3',
             'description': 'Description 3',
             'destination_node_ids': [],
@@ -718,6 +722,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_3'],
@@ -732,6 +737,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': ['node_1'],
@@ -746,6 +752,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 3',
             'description': 'Description 3',
             'destination_node_ids': [],
@@ -776,6 +783,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_3'],
@@ -803,6 +811,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_3'],
@@ -830,6 +839,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_2'],
@@ -844,6 +854,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': [],
@@ -858,6 +869,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 3',
             'description': 'Description 3',
             'destination_node_ids': [],
@@ -879,6 +891,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_2'],
@@ -893,6 +906,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': [],
@@ -907,6 +921,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': [],
@@ -931,6 +946,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'destination_node_ids': ['node_2'],
             'acquired_skill_ids': ['skill_2'],
             'prerequisite_skill_ids': ['skill_1'],
@@ -945,6 +961,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'destination_node_ids': ['node_3'],
             'acquired_skill_ids': ['skill_3'],
             'prerequisite_skill_ids': ['skill_2'],
@@ -959,6 +976,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'destination_node_ids': [],
             'acquired_skill_ids': ['skill_4'],
             'prerequisite_skill_ids': ['skill_3'],
@@ -981,6 +999,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_2'],
@@ -995,6 +1014,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': ['node_4', 'node_3'],
@@ -1009,6 +1029,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 3',
             'description': 'Description 3',
             'destination_node_ids': [],
@@ -1023,6 +1044,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 4',
             'description': 'Description 4',
             'destination_node_ids': [],
@@ -1068,6 +1090,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_2'],
@@ -1082,6 +1105,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': ['node_4', 'node_3'],
@@ -1128,6 +1152,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 1',
             'description': 'Description 1',
             'destination_node_ids': ['node_2'],
@@ -1142,6 +1167,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 2',
             'description': 'Description 2',
             'destination_node_ids': ['node_4', 'node_3'],
@@ -1156,6 +1182,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
             'thumbnail_filename': 'image.svg',
             'thumbnail_bg_color': constants.ALLOWED_THUMBNAIL_BG_COLORS[
                 'chapter'][0],
+            'thumbnail_size_in_bytes': 21131,
             'title': 'Title 3',
             'description': 'Description 3',
             'destination_node_ids': [],
@@ -1198,7 +1225,7 @@ class StoryDomainUnitTests(test_utils.GenericTestBase):
         """
         story_node = story_domain.StoryNode(
             self.NODE_ID_1, 'Title', 'Description', None,
-            constants.ALLOWED_THUMBNAIL_BG_COLORS['chapter'][0],
+            constants.ALLOWED_THUMBNAIL_BG_COLORS['chapter'][0], None,
             [self.NODE_ID_2], [self.SKILL_ID_1], [self.SKILL_ID_2],
             'Outline', False, self.EXP_ID)
         story_contents = story_domain.StoryContents(
